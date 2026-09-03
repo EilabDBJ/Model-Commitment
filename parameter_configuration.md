@@ -43,7 +43,7 @@ The model-specific values of $\pi_m$ are the unserved-token penalty coefficients
 The TTFT limit $L_m^{\mathrm{TTFT}}=2$ s and the TPOT limit $L_m^{\mathrm{TPOT}}=50$ ms are consistent with the service targets reported for practical serving systems [17,18]. The maximum throughput $R_m^{\max}$ and $\rho_m^{\mathrm{TPOT}}$ are derived from [5,11,19,20].
 Furthermore, we validated the assumed linear relationship between SLO-compliant output-token capacity and the TPOT limit (Eq. (12) of the manuscript): 
 
-$$\sum_r q_{r,m,n,t} \le \left(\rho_m^{TPOT}L_m^{TPOT} \right) \cdot R_m^{\max} \cdot \widetilde{x}_{m,n,t} \cdot \Delta t $$
+$$\sum_r q_{r,m,n,t} \le (\rho_m^{TPOT} L_m^{TPOT} ) \cdot R_m^{\max} \cdot \widetilde{x}_{m,n,t} \cdot \Delta t $$
 
 We evaluated five TPOT thresholds using Qwen2.5-72B: 40, 45, 50, 60, and 75 ms. At each threshold, a run was accepted only if all requests completed successfully and the queue remained stable, with experiments repeated across three random seeds.
 A total of 46,900 requests drawn from publicly available benchmark datasets were evaluated.
